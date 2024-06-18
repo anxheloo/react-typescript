@@ -1,22 +1,25 @@
-import React, { useState } from "react";
-import Heading from "./components/Heading";
-import Section from "./components/Section";
-import Counter from "./components/Counter";
-import List from "./components/List";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState<number>(1);
-
   return (
-    <>
-      <Heading title="Hello" />
-      <Section title="Different Title">This is my Section</Section>
-      <Counter setCount={setCount}>Count is {count}</Counter>
-      <List
-        items={["Coffee", "Tacos", "Code"]}
-        render={(item: string) => <span>{item}</span>}
-      ></List>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
